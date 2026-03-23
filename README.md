@@ -19,3 +19,19 @@ venv_loki-log-generator\Scripts\activate.bat
 ```shell
 pip install -r requirements.txt
 ```
+
+
+# Log QL
+
+``
+{service_name="gateway"} | json | client_ip =~ "192\\.168\\.1\\.82"
+```
+
+``
+{service_name="gateway"} | json | client_ip =~ "192\\.168\\.1\\.82" | method = "POST"
+```
+
+
+``
+{service_name="gateway"} | json | client_ip =~ "192\\.168\\.1\\..*"
+```
